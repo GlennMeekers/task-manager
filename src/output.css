@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-stone-50: oklch(98.5% 0.001 106.423);
     --color-stone-100: oklch(97% 0.001 106.424);
     --color-stone-200: oklch(92.3% 0.003 48.717);
@@ -27,6 +28,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
@@ -249,6 +252,9 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
+  }
   .w-\[35rem\] {
     width: 35rem;
   }
@@ -307,6 +313,9 @@
   .bg-stone-50 {
     background-color: var(--color-stone-50);
   }
+  .bg-stone-100 {
+    background-color: var(--color-stone-100);
+  }
   .bg-stone-200 {
     background-color: var(--color-stone-200);
   }
@@ -361,6 +370,10 @@
   .text-right {
     text-align: right;
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -398,6 +411,9 @@
   }
   .text-stone-600 {
     color: var(--color-stone-600);
+  }
+  .text-stone-700 {
+    color: var(--color-stone-700);
   }
   .text-stone-800 {
     color: var(--color-stone-800);
@@ -439,6 +455,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-stone-950);
+      }
+    }
+  }
+  .hover\:text-red-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-red-500);
       }
     }
   }
@@ -491,6 +514,10 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+}
+a, button {
+  cursor: pointer;
+  transition: 150ms ease;
 }
 @property --tw-translate-x {
   syntax: "*";
