@@ -14,7 +14,7 @@ export default function Modal({ ref, children, buttonText }) {
   return createPortal(
     <dialog
       ref={dialog}
-      className="backdrop:bg-stone-900/90 p-4 rounded-md shadow-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      className="w-[35rem] backdrop:bg-stone-900/90 p-4 rounded-md shadow-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
     >
       {children}
       <form method="dialog" className="mt-4 text-right">
